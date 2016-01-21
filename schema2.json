@@ -1,0 +1,1147 @@
+{
+  "ROOT": {
+    "application": {
+      "type": null
+    },
+    "returns": {
+      "type": "returnsType"
+    }
+  },
+  "returnsType": {
+    "IRS1040": {
+      "type": "IRS1040Type"
+    }
+  },
+  "IRS1040Type": {
+    "Return": {
+      "type": "ReturnType"
+    },
+    "UUID": {
+      "type": "UUIDType"
+    },
+    "ueData": {
+      "type": "ueDataType"
+    },
+    "calculatedUEData": {
+      "type": "calculatedUEDataType"
+    }
+  },
+  "calculatedUEDataType": {
+    "w2": {
+      "type": "w2CalculatedUEDataType"
+    }
+  },
+  "ReturnType": {
+    "UUID": {
+      "type": "UUIDType"
+    },
+    "ReturnData": {
+      "type": "ReturnDataType"
+    },
+    "ReturnHeader": {
+      "type": "ReturnHeaderType"
+    }
+  },
+  "ReturnDataType": {
+    "UUID": {
+      "type": "UUIDType"
+    },
+    "IRS1040": {
+      "type": "IRS1040FormType"
+    },
+    "IRSW2": {
+      "type": "IRSW2Type",
+      "metaData": {
+        "multiCopy": "true"
+      }
+    },
+    "IRS3903": {
+      "type": "IRS3903Type",
+      "metaData": {
+        "multiCopy": "true"
+      }
+    },
+    "IRS1040ScheduleC": {
+      "type": "IRS1040ScheduleCType",
+      "metaData": {
+        "multiCopy": "true"
+      }
+    },
+    "ScheduleSEAdjustments": {
+      "type": "ScheduleSEAdjustmentsType"
+    },
+    "Purgatory": {
+      "type": "PurgatoryType"
+    },
+    "PPPerson": {
+      "type": "PPPersonType"
+    },
+    "PPReturnInformation": {
+      "type": "PPReturnInformationType"
+    },
+    "W2Summary": {
+      "type": "W2SummaryType"
+    }
+  },
+  "ReturnHeaderType": {
+    "TaxYr": {
+      "type": "TextType"
+    }
+  },
+  "PPReturnInformationType": {
+    "NonResidentStateGrpPP": {
+      "type": "NonResidentStateGrpPPType"
+    },
+    "TaxpayerSSNValidIndPP": {
+      "type": "BooleanType"
+    },
+    "SpouseSSNValidIndPP": {
+      "type": "BooleanType"
+    }
+  },
+  "NonResidentStateGrpPPType": {
+    "NonResidentStatePP": {
+      "type": "NonResidentStatePPType",
+      "metaData": {
+        "multiCopy": "true"
+      }
+    }
+  },
+  "NonResidentStatePPType": {
+    "UUID": {
+      "type": "UUIDType"
+    },
+    "StatePP": {
+      "type": "TextType",
+      "default": ""
+    }
+  },
+  "PPPersonType": {
+    "TaxpayerFilerInfoPP": {
+      "type": "TaxpayerFilerInfoPPType"
+    },
+    "SpouseFilerInfoPP": {
+      "type": "SpouseFilerInfoPPType"
+    }
+  },
+  "PersonFullNameType": {
+    "UUID": {
+      "type": "UUIDType"
+    },
+    "PersonFirstNm": {
+      "type": "TextType"
+    },
+    "PersonLastNm": {
+      "type": "TextType"
+    }
+  },
+  "PurgatoryType": {
+    "W2NavPP": {
+      "type": "TextType"
+    }
+  },
+  "IRS1040FormType": {
+    "TotalExcessSSOrTier1RRTAClaimedAmtPP": {
+      "type": "USAmountNNType"
+    },
+    "ExcessSocSecAndTier1RRTATaxAmt": {
+      "type": "USAmountNNType"
+    },
+    "IndividualReturnFilingStatusCd": {
+      "type": "TextType"
+    },
+    "RefundAmt": {
+      "type": "IntegerType"
+    },
+    "OwedAmt": {
+      "type": "IntegerType"
+    }
+  },
+  "IRS3903Type": {
+    "NewWorkPlaceCityNamePP": {
+      "type": "TextType"
+    }
+  },
+  "IRS1040ScheduleCType": {
+    "PrincipalBusinessActivityDesc": {
+      "type": "TextType"
+    }
+  },
+  "IRSW2Type": {
+    "FieldAttributes": {
+      "type": "FieldAttributesType"
+    },
+    "EmployeeUSAddress": {
+      "type": "EmployeeUSAddressType"
+    },
+    "EmployeeForeignAddress": {
+      "type": "EmployeeForeignAddressType"
+    },
+    "ScheduleCDynamicLinkPP": {
+      "type": "TextType"
+    },
+    "IRS3903DynamicLinkPP": {
+      "type": "TextType"
+    },
+    "EmployeeNm": {
+      "type": "W2EmployeeNmType"
+    },
+    "SpouseCopyIndPP": {
+      "type": "CheckboxType"
+    },
+    "TransferEmployeeInfoPPR2": {
+      "type": "CheckboxType",
+      "default": "true"
+    },
+    "IsTransferredIndPP": {
+      "type": "BooleanType"
+    },
+    "FirstTransferredIndPP": {
+      "type": "BooleanType"
+    },
+    "ClergyDesignatedHousingAmtPP": {
+      "type": "USAmountNNType"
+    },
+    "ClergySmallestHousingAmtPP": {
+      "type": "USAmountNNType"
+    },
+    "TypeOfEmployerAddressPP": {
+      "type": "EnumType",
+      "enum": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "validation": [
+        {
+          "type": "required",
+          "paramName": "enum"
+        }
+      ],
+      "default": "0"
+    },
+    "ClergySelfEmploymentTaxCdPP": {
+      "type": "EnumType",
+      "enum": [
+        "ClergySETaxonHousing",
+        "ClergySETaxonW2",
+        "ClergySETaxonHousingandW2",
+        "ClergyExpemptfromSETax",
+        "NonClergySETaxonW2",
+        "NonClergyExpemptfromSETax",
+        "NoSSAndMedicareTax"
+      ],
+      "validation": [
+        {
+          "type": "required",
+          "paramName": "enum"
+        }
+      ]
+    },
+    "UnreportedMoreThanTwentyDollarsTipsAmtPP": {
+      "type": "USAmountNNType"
+    },
+    "UnreportedLessThanTwentyDollarsTipsAmtPP": {
+      "type": "USAmountNNType"
+    },
+    "UnreportedNonCashowExtraSSTipsAmtPP": {
+      "type": "USAmountNNType"
+    },
+    "UnreportedActualAllocatedTipsAmtPP": {
+      "type": "USAmountNNType"
+    },
+    "UnreportedSharedTipsAmtPP": {
+      "type": "USAmountNNType"
+    },
+    "UnreportedNonCashTipsAmtPP": {
+      "type": "USAmountNNType"
+    },
+    "AllocatedTipsAmt": {
+      "type": "USAmountNNType"
+    },
+    "W2ImportSourcePP" : {
+      "type": "TextType"
+    },
+    "W2HashCdPP": {
+      "type": "TextType",
+      "format": {
+        "type": "maskedAlphanumeric",
+        "mask": "####-####-####-####"
+      },
+      "default": "",
+      "validation" : [
+        {
+          "type" : "regex",
+          "param" : "^[a-zA-Z0-9]{4}-[a-zA-Z0-9]{4}-[a-zA-Z0-9]{4}-[a-zA-Z0-9]{4}$",
+          "message" : "This needs to be 16 characters"
+        }
+      ]
+    },
+    "W2DownloadCdPP": {
+      "type": "EnumType",
+      "enum": [
+        "0",
+        "1",
+        "2",
+        "9"
+      ],
+      "validation": [
+        {
+          "type": "required",
+          "paramName": "enum"
+        }
+      ],
+      "default": "9"
+    },
+    "W2DownloadResultCdPP": {
+      "type": "EnumType",
+      "enum": [
+        "0",
+        "1"
+      ],
+      "validation": [
+        {
+          "type": "required",
+          "paramName": "enum"
+        }
+      ],
+      "default": "1"
+    },
+    "W2DownloadFailedAttemptCntPP": {
+      "type": "IntegerType",
+      "default": "0",
+      "validation": [
+        {
+          "type": "greaterOrEqual",
+          "param": "0"
+        },
+        {
+          "type": "lessOrEqual",
+          "param": "999"
+        }
+      ]
+    },
+    "SocialSecurityTipsAmt": {
+      "type": "USAmountNNType",
+      "default": "0"
+    },
+    "SocialSecurityTaxAmt": {
+      "type": "USAmountNNType"
+    },
+    "MedicareTaxWithheldAmt": {
+      "type": "USAmountNNType"
+    },
+    "UnreportedTipsGovEmployeeIndPP": {
+      "type": "BooleanType"
+    },
+    "EmployerName": {
+      "type": "EmployerNameType"
+    },
+    "ActiveDutyMilitaryIndPP": {
+      "type": "BooleanType",
+      "default": false
+    },
+    "WorkedOutsideUSIndPP": {
+      "type": "BooleanType",
+      "default": false
+    },
+    "PaidFamilyLeaveIndPP": {
+      "type": "BooleanType",
+      "default": false
+    },
+    "UnreportedTipsIndPP": {
+      "type": "BooleanType",
+      "default": false
+    },
+    "HaveClergyChurchRelSectIncomeIndPP": {
+      "type": "BooleanType",
+      "default": false
+    },
+    "InternationalOrgIndPP": {
+      "type": "BooleanType",
+      "default": false
+    },
+    "PensionPlanIndPP": {
+      "type": "BooleanType",
+      "default": false
+    },
+    "TotalTipsPP": {
+      "type": "USAmountNNType"
+    },
+    "CorrectedW2Ind": {
+      "type": "BooleanType",
+      "default": false
+    },
+    "StandardOrNonStandardCd": {
+      "type": "EnumType",
+      "enum": [
+        "N",
+        "S",
+        ""
+      ],
+      "default": "S"
+    },
+    "SubstituteFormIndPP": {
+      "type": "BooleanType",
+      "default": false
+    },
+    "InmateIndPP": {
+      "type": "BooleanType",
+      "default": false
+    },
+    "NonQualifiedPlansDistributionAmtPP": {
+      "type": "USAmountNNType"
+    },
+    "W2ClergyFirstChoicePPR2": {
+      "type": "EnumType",
+      "enum": [
+        "CLERGY",
+        "NONCLERGY",
+        "NONCLERGYSECT"
+      ],
+      "validation": [
+        {
+          "type": "required",
+          "message": "Choose from the list below or select Back if none of these apply to you."
+        }
+      ]
+    },
+    "EmployerUSAddress": {
+      "type": "EmployerUSAddressType"
+    },
+    "EmployerForeignAddress": {
+      "type": "EmployerForeignAddressType"
+    },
+    "ExplainEffortsGrpPP": {
+      "type": "ExplanationGrpPP"
+    },
+    "ExplainAmountsGrpPP": {
+      "type": "ExplanationGrpPP"
+    },
+    "HaveAny4852IndPP": {
+      "type": "BooleanType"
+    },
+    "EmployeeSSN": {
+      "type": "SSNType"
+    },
+    "EmployerEIN": {
+      "type": "EINType",
+      "validation" : [
+        {
+          "type" : "regex",
+          "param" : "^[0-9]{2}-[0-9]{7}$",
+          "message" : "Invalid EIN, must be ##-#######"
+        }
+      ]
+    },
+    "LastYearWagesAmtPP": {
+      "type": "USAmountNNType"
+    },
+    "WagesAmt": {
+      "type": "USAmountNNType"
+    },
+    "WithholdingAmt": {
+      "type": "USAmountNNType"
+    },
+    "SocialSecurityWagesAmt": {
+      "type": "USAmountNNType"
+    },
+    "SocialSecurityTaxAmt": {
+      "type": "USAmountNNType"
+    },
+    "MedicareWagesAndTipsAmt": {
+      "type": "USAmountNNType"
+    },
+    "MedicareTaxWithheldAmt": {
+      "type": "USAmountNNType"
+    },
+    "SocialSecurityTipsAmt": {
+      "type": "USAmountNNType"
+    },
+    "AllocatedTipsAmt": {
+      "type": "USAmountNNType"
+    },
+    "DependentCareBenefitsAmt": {
+      "type": "USAmountNNType"
+    },
+    "NonqualifiedPlansAmt": {
+      "type": "USAmountNNType"
+    },
+    "EmployersUseGrp": {
+      "type": "EmployersUseGrpType",
+      "metaData": {
+        "multiCopy": "true"
+      }
+    },
+    "OtherDeductionsBenefitsGrp": {
+      "type": "OtherDeductionsBenefitsGrpType",
+      "metaData": {
+        "multiCopy": "true"
+      }
+    },
+    "W2StateTaxGrpPP": {
+      "type": "W2StateTaxGrpPPType",
+      "metaData": {
+        "multiCopy": "true"
+      }
+    },
+    "W2LocalTaxGrpPP": {
+      "type": "W2LocalTaxGrpPPType",
+      "metaData": {
+        "multiCopy": "true"
+      }
+    },
+    "StatutoryEmployeeInd": {
+      "type": "CheckboxType"
+    },
+    "HaveStatutoryEmployeeIndPP": {
+      "type": "BooleanType"
+    },
+    "ScheduleCDynamicLinkPP": {
+      "type": "UUIDType"
+    },
+    "IRS3903DynamicLinkPP": {
+      "type": "UUIDType"
+    },
+    "ScheduleCNewJobPP": {
+      "type": "TextType"
+    },
+    "RetirementPlanInd": {
+      "type": "CheckboxType"
+    },
+    "ThirdPartySickPayInd": {
+      "type": "CheckboxType"
+    },
+    "GovernmentEmployerIndPP": {
+      "type": "CheckboxType"
+    },
+    "RRTACodeAAmtPP": {
+      "type": "USAmountNNType"
+    },
+    "RRTACodeMAmtPP": {
+      "type": "USAmountNNType"
+    },
+    "MSACodeRTaxpayerAmtPP": {
+      "type": "USAmountNNType"
+    },
+    "MSACodeRSpouseAmtPP": {
+      "type": "USAmountNNType"
+    },
+    "HSACodeWTaxpayerAmtPP": {
+      "type": "USAmountNNType"
+    },
+    "HSACodeWSpouseAmtPP": {
+      "type": "USAmountNNType"
+    },
+    "HaveOnSiteDepCareIndPP": {
+      "type": "BooleanType"
+    },
+    "FSALeftoverAmtPP": {
+      "type": "USAmountNNType"
+    },
+    "ImportedEmployerIndPPR2": {
+      "type" : "BooleanType"
+    },
+    "MilitaryEINIndPP": {
+      "type" : "BooleanType"
+    },
+    "IsSubstituteFormIndPP": {
+      "type": "CheckboxType"
+    },
+    "IsThereRefundBasedOnW2IndPP": {
+      "type": "UUIDType"
+    }
+  },
+  "FieldAttributesType": {
+    "UnreportedActualAllocatedTipsAmtPP": {
+      "type": "UnreportedActualAllocatedTipsAmtPPFieldAttributesType"
+    },
+    "UnreportedLessThanTwentyDollarsTipsAmtPP": {
+      "type": "UnreportedLessThanTwentyDollarsTipsAmtPPFieldAttributesType"
+    },
+    "UnreportedMoreThanTwentyDollarsTipsAmtPP": {
+      "type": "UnreportedMoreThanTwentyDollarsTipsAmtPPFieldAttributesType"
+    },
+    "UnreportedNonCashTipsAmtPP": {
+      "type": "UnreportedNonCashTipsAmtPPFieldAttributesType"
+    },
+    "UnreportedSharedTipsAmtPP": {
+      "type": "UnreportedSharedTipsAmtPPFieldAttributesType"
+    },
+    "UnreportedTipsGovEmployeeIndPP": {
+      "type": "UnreportedTipsGovEmployeeIndPPFieldAttributesType"
+    },
+    "WagesAmt": {
+      "type": "WagesAmtFieldAttributesType"
+    },
+    "WithholdingAmt": {
+      "type": "WithholdingAmtFieldAttributesType"
+    }
+  },
+  "UnreportedTipsGovEmployeeIndPPFieldAttributesType": {
+    "Covered": {
+      "type": "BooleanType"
+    }
+  },
+  "UnreportedSharedTipsAmtPPFieldAttributesType": {
+    "Covered": {
+      "type": "BooleanType"
+    }
+  },
+  "UnreportedNonCashTipsAmtPPFieldAttributesType": {
+    "Covered": {
+      "type": "BooleanType"
+    }
+  },
+  "UnreportedMoreThanTwentyDollarsTipsAmtPPFieldAttributesType": {
+    "Covered": {
+      "type": "BooleanType"
+    }
+  },
+  "UnreportedLessThanTwentyDollarsTipsAmtPPFieldAttributesType": {
+    "Covered": {
+      "type": "BooleanType"
+    }
+  },
+  "UnreportedActualAllocatedTipsAmtPPFieldAttributesType": {
+    "Covered": {
+      "type": "BooleanType"
+    }
+  },
+  "WagesAmtFieldAttributesType": {
+    "Covered": {
+      "type": "BooleanType"
+    }
+  },
+  "WithholdingFieldAttributesType": {
+    "Covered": {
+      "type": "BooleanType"
+    }
+  },
+  "EmployersUseGrpType": {
+    "UUID": {
+      "type": "UUIDType"
+    },
+    "EmployersUseCd": {
+      "type": "TextType"
+    },
+    "EmployersUseAmt": {
+      "type": "USAmountNNType"
+    }
+  },
+  "OtherDeductionsBenefitsGrpType": {
+    "UUID": {
+      "type": "UUIDType"
+    },
+    "Desc": {
+      "type": "TextType"
+    },
+    "Amt": {
+      "type": "USAmountNNType"
+    },
+    "CategoryCodePP": {
+      "type": "TextType",
+      "default": ""
+    }
+  },
+  "W2StateTaxGrpPPType": {
+    "UUID": {
+      "type": "UUIDType"
+    },
+    "StateAbbreviationCd": {
+      "type": "TextType"
+    },
+    "EmployerStateIdNum": {
+      "type": "TextType",
+      "format": {
+        "type": "maskedAlphanumeric",
+        "mask": "################"
+      },
+      "default": ""
+    },
+    "StateWagesAmt": {
+      "type": "USAmountNNType"
+    },
+    "StateIncomeTaxAmt": {
+      "type": "USAmountNNType"
+    }
+  },
+  "W2LocalTaxGrpPPType": {
+    "UUID": {
+      "type": "UUIDType"
+    },
+    "LocalWagesAndTipsAmt": {
+      "type": "USAmountNNType"
+    },
+    "LocalIncomeTaxAmt": {
+      "type": "USAmountNNType"
+    },
+    "LocalityNm": {
+      "type": "TextType"
+    },
+    "StateAbbreviationCdPP": {
+      "type": "TextType"
+    }
+  },
+  "EmployeeUSAddressType": {
+    "AddressLine1Txt": {
+      "type": "TextType"
+    },
+    "CityNm": {
+      "type": "TextType"
+    },
+    "StateAbbreviationCd": {
+      "type": "TextType"
+    },
+    "ZIPCd": {
+      "type": "TextType"
+    }
+  },
+  "EmployeeForeignAddressType": {
+    "AddressLine1Txt": {
+      "type": "TextType"
+    },
+    "CityNm": {
+      "type": "TextType"
+    },
+    "ProvinceOrStateNm": {
+      "type": "TextType"
+    },
+    "CountryCd": {
+      "type": "TextType"
+    },
+    "ForeignPostalCd": {
+      "type": "TextType"
+    }
+  },
+  "ScheduleSEAdjustmentsType": {
+    "TaxpayerSEReportedIncomePP": {
+      "type": "USAmountNNType"
+    },
+    "SpouseSEReportedIncomePP": {
+      "type": "USAmountNNType"
+    },
+    "ForeignIntTPIndPP": {
+      "type": "BooleanType"
+    },
+    "ForeignIntSPIndPP": {
+      "type": "BooleanType"
+    }
+  },
+  "ExplanationGrpPP": {
+    "ExplanationPP": {
+      "type": "ExplanationPPType",
+      "metaData": {
+        "multiCopy": "true"
+      }
+    }
+  },
+  "ExplanationPPType": {
+    "UUID": {
+      "type": "UUIDType"
+    },
+    "TextPP": {
+      "type": "TextType"
+    }
+  },
+  "W2EmployeeNmType": {
+    "PersonFirstNm": {
+      "type": "TextType",
+      "validation": [
+        {
+          "type": "maxLength",
+          "param": 35
+        }
+      ]
+    },
+    "PersonLastNm": {
+      "type": "TextType"
+    }
+  },
+  "EmployerNameType": {
+    "BusinessNameLine1Txt": {
+      "type": "TextType",
+      "default": "",
+      "validation": [
+        {
+          "type": "maxLength",
+          "param": 35
+        }
+      ]
+    },
+    "BusinessNameLine2Txt": {
+      "type": "TextType",
+      "default": "",
+      "validation": [
+        {
+          "type": "maxLength",
+          "param": 35
+        }
+      ]
+    }
+  },
+  "EmployerUSAddressType": {
+    "AddressLine1Txt": {
+      "type": "TextType",
+      "validation": [
+        {
+          "type": "maxLength",
+          "param": 35
+        },
+        {
+          "type": "regex",
+          "param": "^[^@]*$",
+          "message": "There is @ symbol in the address line. Verify the address is a mailing address and not an email address."
+        }
+      ]
+    },
+    "AddressLine2Txt": {
+      "type": "TextType",
+      "validation": [
+        {
+          "type": "maxLength",
+          "param": 35
+        }
+      ]
+    },
+    "CityNm": {
+      "type": "TextType",
+      "validation": [
+        {
+          "type": "maxLength",
+          "param": 35
+        },
+        {
+          "type": "minLength",
+          "param": 3
+        }
+      ]
+    },
+    "StateAbbreviationCd": {
+      "type": "TextType"
+    },
+    "ZIPCd": {
+      "type": "ZIPCodeType"
+    }
+  },
+  "EmployerForeignAddressType": {
+    "AddressLine1Txt": {
+      "type": "TextType",
+      "validation": [
+        {
+          "type": "maxLength",
+          "param": 35
+        },
+        {
+          "type": "regex",
+          "param": "^[^@]*$",
+          "message": "There is @ symbol in the address line. Verify the address is a mailing address and not an email address."
+        }
+      ]
+    },
+    "CityNm": {
+      "type": "TextType",
+      "validation": [
+        {
+          "type": "maxLength",
+          "param": 35
+        },
+        {
+          "type": "minLength",
+          "param": 3
+        }
+      ]
+    },
+    "ProvinceOrStateNm": {
+      "type": "TextType"
+    },
+    "CountryCd": {
+      "type": "TextType"
+    },
+    "ForeignPostalCd": {
+      "type": "TextType"
+    }
+  },
+  "ueDataType": {
+    "topics": {
+      "type": "topicsType"
+    }
+  },
+  "topicsType": {
+    "w2": {
+      "type": "w2Type"
+    }
+  },
+  "w2Type": {
+    "HasUnreportedTipsMoreThanTwentydollars": {
+      "type": "BooleanType"
+    },
+    "currentUuid": {
+      "type": "TextType"
+    },
+    "AddressChoice": {
+      "type": "BooleanType",
+      "default": "true"
+    },
+    "W2HaveW2Form": {
+      "type": "BooleanType"
+    },
+    "W2NewForm": {
+      "type": "BooleanType"
+    },
+    "W2EditForm": {
+      "type": "BooleanType"
+    },
+    "W2GoToSummary": {
+      "type": "BooleanType"
+    },
+    "W2GoToAskAnother": {
+      "type": "BooleanType"
+    },
+    "W2GoToReview": {
+      "type": "BooleanType",
+      "default": "true"
+    },
+    "HSAcontrib": {
+      "type": "TextType"
+    },
+    "codeATotal": {
+      "type": "USAmountNNType"
+    },
+    "codeMTotal": {
+      "type": "USAmountNNType"
+    },
+    "codeRTotal": {
+      "type": "USAmountNNType"
+    },
+    "codeWTotal": {
+      "type": "USAmountNNType"
+    },
+    "importUUID": {
+      "type": "TextType"
+    },
+    "importStatus": {
+      "type": "TextType"
+    },
+    "skipMCUI": {
+      "type": "TextType"
+    },
+    "show4582Agreement": {
+      "type": "Boolean"
+    },
+    "show4582EmployerAddress": {
+      "type": "Boolean"
+    },
+    "show4582NotifySocialSecurity": {
+      "type": "Boolean"
+    },
+    "show4582Print": {
+      "type": "Boolean"
+    },
+    "jumpTargetView": {
+      "type": "TextType"
+    },
+    "currentW2UUID": {
+      "type": "TextType"
+    },
+    "thisW2Index": {
+      "type": "TextType"
+    },
+    "cleanUpFromBack": {
+      "type": "Boolean"
+    },
+    "goToCleanup": {
+      "type": "Boolean"
+    },
+    "fromTopic": {
+      "type": "TextType"
+    },
+    "fromTopicStatus": {
+      "type": "TextType"
+    },
+    "showBack": {
+      "type": "BooleanType",
+      "default": "true"
+    },
+    "ImportedEmployerEIN": {
+      "type": "TextType"
+    },
+    "ImportedW2UUID": {
+      "type": "TextType"
+    },
+    "ImportedSpouseCopyIndPP": {
+      "type": "Boolean"
+    },
+    "foundEmptyCategoryCodePP": {
+      "type": "Boolean"
+    },
+    "irs3903ChoiceOutput": {
+      "type": "TextType"
+    },
+    "schedCChoiceOutput": {
+      "type": "TextType"
+    },
+    "showAddNewWorkPlace": {
+      "type": "Boolean"
+    },
+    "newIrs3903Place": {
+      "type": "TextType"
+    },
+    "newSchedCDescription": {
+      "type": "TextType",
+      "validation": [
+        {
+          "type": "required"
+        }
+      ]
+    },
+    "w2DownloadCd": {
+      "type": "TextType"
+    },
+    "w2DownloadResultCd": {
+      "type": "TextType"
+    },
+    "w2DownloadFailedAttemptCnt": {
+      "type": "IntegerType"
+    },
+    "w2ReviewOn": {
+      "type": "BooleanType",
+      "default": "false"
+    },
+    "showW2ExplainWhy": {
+      "type": "Boolean"
+    }
+  },
+  "w2CalculatedUEDataType": {
+    "TotalTips": {
+      "type": "USAmountNNType"
+    }
+  },
+  "W2SummaryType": {
+    "EmployerPPR2": {
+      "type": "EmployerPPR2Type"
+    },
+    "EmployerSpousePPR2": {
+      "type": "EmployerSpousePPR2Type"
+    },
+    "ExcessSSWHPPR2": {
+      "type": "ExcessSSWHPPR2Type"
+    },
+    "ExcessSSWHSpousePPR2": {
+      "type": "ExcessSSWHSpousePPR2Type"
+    },
+    "MaxSSContribAmtPP": {
+      "type": "USAmountNNType"
+    },
+    "SocialSecurityWHPPR2": {
+      "type": "SocialSecurityWHPPR2Type"
+    },
+    "SocialSecurityWHSpousePPR2": {
+      "type": "SocialSecurityWHSpousePPR2Type"
+    },
+    "TotalSSWHSpousePPR2": {
+      "type": "USAmountNNType"
+    },
+    "TotalSSWHTPPPR2": {
+      "type": "USAmountNNType"
+    },
+    "ExcessOn1040PPR2": {
+      "type": "USAmountNNType"
+    },
+    "ExcessOn1040SpousePPR2": {
+      "type": "USAmountNNType"
+    }
+  },
+  "SocialSecurityWHPPR2Type": {
+    "SocialSecurityPerW2PPR2": {
+      "type": "USAmountNNType"
+    }
+  },
+  "SocialSecurityWHSpousePPR2Type": {
+    "SocialSecurityPerW2SpousePPR2": {
+      "type": "USAmountNNType"
+    }
+  },
+  "EmployerPPR2Type": {
+    "EmployerPerW2PPR2": {
+      "type": "TextType"
+    }
+  },
+  "EmployerSpousePPR2Type": {
+    "EmployerPerW2SpousePPR2": {
+      "type": "TextType"
+    }
+  },
+  "ExcessSSWHPPR2Type": {
+    "ExcessSSWHPerW2PPR2": {
+      "type": "USAmountNNType"
+    }
+  },
+  "ExcessSSWHSpousePPR2Type": {
+    "ExcessSSWHPerW2SpousePPR2": {
+      "type": "USAmountNNType"
+    }
+  },
+  "SpouseFilerInfoPPType": {
+    "AddressablePossessivePersonNamePPR2": {
+      "type": "TextType"
+    },
+    "AddressableSingularPersonNamePPR2": {
+      "type": "TextType"
+    },
+    "UUID": {
+      "type": "UUIDType"
+    },
+    "MilitaryIndPP": {
+      "type": "BooleanType"
+    },
+    "SSNPP": {
+      "type": "SSNType"
+    },
+    "StateOfResidencePP": {
+      "type": "TextType"
+    },
+    "FormerPlaceOfResidencePP": {
+      "type": "TextType"
+    },
+    "LivedInAnotherStatePP": {
+      "type": "BooleanType",
+      "default": "false"
+    },
+    "PersonFullNamePP": {
+      "type": "PersonFullNameType"
+    }
+  },
+  "TaxpayerFilerInfoPPType": {
+    "AddressablePossessivePersonNamePPR2": {
+      "type": "TextType"
+    },
+    "AddressableSingularPersonNamePPR2": {
+      "type": "TextType"
+    },
+    "UUID": {
+      "type": "UUIDType"
+    },
+    "MilitaryIndPP": {
+      "type": "BooleanType"
+    },
+    "SSNPP": {
+      "type": "SSNType"
+    },
+    "StateOfResidencePP": {
+      "type": "TextType"
+    },
+    "FormerPlaceOfResidencePP": {
+      "type": "TextType"
+    },
+    "LivedInAnotherStatePP": {
+      "type": "BooleanType",
+      "default": "false"
+    },
+    "PersonFullNamePP": {
+      "type": "PersonFullNameType"
+    }
+  }
+
+}
