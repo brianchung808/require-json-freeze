@@ -1,0 +1,17 @@
+{
+  "name": "require-json-freeze",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "deep-freeze": "0.0.1"
+  },
+  "devDependencies": {
+    "ava": "^0.10.0"
+  }
+}

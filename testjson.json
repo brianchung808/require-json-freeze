@@ -1,0 +1,6 @@
+{
+    "hi" : "wut",
+    "nested": {
+        "this": "nesting!"
+    }
+}
