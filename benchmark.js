@@ -1,4 +1,3 @@
-var dp = require('deep-freeze');
 console.time('Regular require');
 require('./schema1');
 console.timeEnd('Regular require');
