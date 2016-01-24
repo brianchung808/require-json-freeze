@@ -1,14 +1,25 @@
 var deepFreeze = require('deep-freeze');
+var path = require('path');
 
 var oldJsonRequire = require.extensions['.json'];
+
+var cwd = process.cwd();
+
+function getRelativePath(filename) {
+  return path.relative(cwd, filename);
+}
+
+function shouldIgnore(filename) {
+  return getRelativePath(filename).split(path.sep).indexOf("node_modules") >= 0;
+}
 
 require.extensions['.json'] = function(module, filename) {
   // this modifies module.exports
   oldJsonRequire(module, filename);
 
-  if(! module.exports) {
-    throw new Error('Something went terribly wrong.');
+  if(shouldIgnore(filename)) {
+    return;
   }
 
-  return deepFreeze(module.exports);
+  module.exports = deepFreeze(module.exports);
 };

@@ -2,7 +2,7 @@ import test from 'ava';
 
 require('./');
 
-test('Deep Freezes Objects', t => {
+test('Deep freezes objects', t => {
   var json = require('./testjson');
 
   const modifyTop = json => {
@@ -19,4 +19,25 @@ test('Deep Freezes Objects', t => {
 
 test('Propagates error for requiring non-existing json', t => {
   t.throws(require.bind(require, './nonexistantjson'));
+});
+
+test('Does not deep-freeze any requires() in a node_modules folder', t => {
+  var test = require('./test/node_modules/test');
+
+  test.whatever = 1;
+  let x = {
+    nested: {
+      more: {
+        things: {
+          a: 1,
+          b: 2
+        }
+      }
+    }
+  };
+
+  test.x = x;
+
+  t.ok(test.whatever === 1);
+  t.same(test.x, x);
 });
