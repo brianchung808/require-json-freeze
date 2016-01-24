@@ -5,14 +5,18 @@ require('./');
 test('Deep Freezes Objects', t => {
   var json = require('./testjson');
 
-  const modifyJson = json => {
+  const modifyTop = json => {
     json.what = 'WUT';
+  };
+
+  const modifyNested = json => {
     json.nested.this = 'helloooooo';
   };
 
-  t.throws(modifyJson.bind(json));
+  t.throws(modifyTop.bind(null, json));
+  t.throws(modifyNested.bind(null, json));
 });
 
 test('Propagates error for requiring non-existing json', t => {
-  t.throws(require.bind('./nonexistantjson'));
+  t.throws(require.bind(require, './nonexistantjson'));
 });
