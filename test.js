@@ -22,7 +22,7 @@ test('Propagates error for requiring non-existing json', t => {
 });
 
 test('Does not deep-freeze any requires() in a node_modules folder', t => {
-  var test = require('./test/node_modules/test');
+  var test = require('deep-freeze/package');
 
   test.whatever = 1;
   let x = {
