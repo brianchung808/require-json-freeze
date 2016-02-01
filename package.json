@@ -1,24 +1,24 @@
 {
-    "name": "require-json-freeze",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "ava test.js"
-    },
-    "author": {
-        "name": "Brian Chung",
-        "email": "brianchung23@gmail.com"
-    },
-    "license": "ISC",
-    "dependencies": {
-        "deep-freeze": "0.0.1"
-    },
-    "devDependencies": {
-        "ava": "^0.10.0"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/brianchung808/require-json-freeze"
-    }
+  "name": "require-json-freeze",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava test.js"
+  },
+  "author": {
+    "name": "Brian Chung",
+    "email": "brianchung23@gmail.com"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "deep-freeze": "0.0.1"
+  },
+  "devDependencies": {
+    "ava": "^0.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brianchung808/require-json-freeze"
+  }
 }
