@@ -1,6 +1,6 @@
 import test from 'ava';
 
-require('./');
+require('../');
 
 test('Deep freezes objects', t => {
   var json = require('./testjson');
